@@ -23,10 +23,9 @@ A vibrant, pixel-perfect landing page for a creative agency built with pure HTML
 ### Mobile View
 ![mobile-design](https://github.com/user-attachments/assets/d6d8f7b9-d60c-4f38-b638-18cb57d66ba5)
 
+## Live Demo  
+Click here → **[View Live Site](https://princyfmchallenge.netlify.app)](https://princyfmchallenge.netlify.app)**
 
-## 🚀 Live Demo
-
-👉 **[View Live Site](princyfmchallenge.netlify.app)**
 
 ## 🎯 The Challenge
 
