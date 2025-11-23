@@ -17,10 +17,10 @@ A vibrant, pixel-perfect landing page for a creative agency built with pure HTML
 ## 🖼️ Screenshots
 
 ### Desktop View
-![Desktop Preview](./screenshots/desktop-view.png)
+![Desktop Preview](./images/mobile/image-header.jpg)
 
 ### Mobile View
-![Mobile Preview](./screenshots/mobile-view.png)
+![Mobile Preview](./images/desktop/image-header.jpg)
 
 ## 🚀 Live Demo
 
@@ -127,11 +127,9 @@ Areas I'm exploring next:
 
 **Your Name**
 
-- 🌐 Portfolio: [yourwebsite.com](https://www.yourwebsite.com)
-- 💼 LinkedIn: [Your Name](https://www.linkedin.com/in/yourusername)
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 🎨 Frontend Mentor: [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- 🐦 Twitter: [@yourusername](https://twitter.com/yourusername)
+- 💼 LinkedIn: [Your Name](https://www.linkedin.com/in/princy-dhanciya-46a58a2b4)
+- 🎨 Frontend Mentor: [@yourusername](https://www.frontendmentor.io/profile/princyDhanciya)
+
 
 ---
 
