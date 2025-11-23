@@ -24,7 +24,7 @@ A vibrant, pixel-perfect landing page for a creative agency built with pure HTML
 
 ## 🚀 Live Demo
 
-👉 **[View Live Site](https://yourusername.github.io/sunnyside-agency-landing-page)**
+👉 **[View Live Site](princyfmchallenge.netlify.app)**
 
 ## 🎯 The Challenge
 
