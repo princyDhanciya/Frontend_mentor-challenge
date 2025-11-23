@@ -1,0 +1,611 @@
+/* GOOGLE FONTS IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+/* ==================== RESET & BASE ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: hsl(232, 10%, 55%);
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==================== HEADER & NAVIGATION ==================== */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: -0.5px;
+}
+
+/* Hamburger Menu Toggle */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: hsl(0, 0%, 100%);
+  border-radius: 2px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { top: 16px; }
+
+nav {
+  position: absolute;
+  top: 6.5rem;
+  right: 1.5rem;
+  background: hsl(0, 0%, 100%);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  min-width: 330px;
+}
+
+nav::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 24px 24px;
+  border-color: transparent transparent hsl(0, 0%, 100%) transparent;
+}
+
+#menu-toggle:checked ~ nav {
+  opacity: 1;
+  pointer-events: all;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 2rem;
+}
+
+nav li:last-child {
+  margin-bottom: 0;
+}
+
+nav a {
+  color: hsl(232, 10%, 55%);
+  font-size: 1.25rem;
+}
+
+nav .contact-btn {
+  background: hsl(51, 100%, 49%);
+  color: hsl(212, 27%, 19%);
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  display: inline-block;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+  position: relative;
+  background: hsl(200, 100%, 62%);
+  min-height: 538px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.3rem;
+  overflow: hidden;
+
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: -100px;
+  padding: 2rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 3rem;
+}
+
+.arrow-down {
+  width: 36px;
+  height: 114px;
+  margin: 0 auto;
+}
+
+/* ==================== FEATURE SECTIONS (Transform & Stand Out) ==================== */
+.features {
+  display: grid;
+}
+
+.feature {
+  display: grid;
+}
+
+.feature-image {
+  width: 100%;
+  height: 312px;
+  object-fit: cover;
+}
+
+.feature-content {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.feature-content h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.feature-content p {
+  color: hsl(232, 10%, 55%);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.feature-content a {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 1rem;
+  color: hsl(212, 27%, 19%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.feature-content a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 137px;
+  height: 10px;
+  border-radius: 10px;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+.feature-content a:hover::after {
+  opacity: 1;
+}
+
+.feature-content.transform-content a::after {
+  background: hsl(51, 100%, 49%);
+}
+
+.feature-content.standout-content a::after {
+  background: hsl(7, 99%, 70%);
+}
+
+/* ==================== SERVICES SECTION (Graphic Design & Photography) ==================== */
+.services {
+  display: grid;
+}
+
+.service {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  padding: 3.5rem 1.5rem;
+}
+
+.service-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.service-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.service-content h3 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.service.graphic-design .service-content h3,
+.service.graphic-design .service-content p {
+  color: hsl(167, 40%, 24%);
+}
+
+.service.photography .service-content h3,
+.service.photography .service-content p {
+  color: hsl(198, 62%, 26%);
+}
+
+/* ==================== TESTIMONIALS SECTION ==================== */
+.testimonials {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1rem;
+  font-weight: 900;
+  color: hsl(210, 4%, 67%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 4rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 4rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.testimonial-text {
+  color: hsl(213, 9%, 39%);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 350px;
+}
+
+.testimonial-author {
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-author h4 {
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+}
+
+.testimonial-role {
+  font-size: 0.875rem;
+  color: hsl(210, 4%, 67%);
+}
+
+/* ==================== GALLERY SECTION ==================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 188px;
+  object-fit: cover;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background: hsl(168, 45%, 68%);
+  padding: 4rem 2rem 5rem;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(167, 40%, 24%);
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.footer-nav {
+  margin-bottom: 5rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.footer-nav a {
+  color: hsl(167, 34%, 41%);
+  font-size: 1.125rem;
+}
+
+.footer-nav a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-bottom: 5rem;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(167, 40%, 24%);
+}
+
+.attribution a {
+  color: hsl(167, 40%, 24%);
+  text-decoration: underline;
+}
+
+/* ==================== DESKTOP STYLES (768px+) ==================== */
+@media (min-width: 768px) {
+  /* HEADER */
+  header {
+    padding: 2.5rem 3rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    opacity: 1;
+    pointer-events: all;
+    background: transparent;
+    padding: 0;
+    min-width: auto;
+  }
+
+  nav::before {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  nav li {
+    margin-bottom: 0;
+  }
+
+  nav a {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.125rem;
+  }
+
+  nav .contact-btn {
+    background: hsl(0, 0%, 100%);
+    color: hsl(212, 27%, 19%);
+    font-size: 0.9375rem;
+    padding: 1rem 2rem;
+  }
+
+  nav .contact-btn:hover {
+    background: hsla(0, 0%, 100%, 0.25);
+    color: hsl(0, 0%, 100%);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 800px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 10px;
+  }
+
+  /* FEATURES - 50/50 split with proper image display */
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+    display: contents;
+  }
+
+  .feature:nth-child(1) .feature-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .feature:nth-child(1) .feature-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .feature:nth-child(2) .feature-image {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .feature:nth-child(2) .feature-content {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .feature-image {
+    height: 100%;
+    min-height: 600px;
+  }
+
+  .feature-content {
+    padding: 0 6rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 600px;
+  }
+
+  .feature-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .feature-content a::after {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  /* SERVICES - 50/50 split */
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service {
+    min-height: 600px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 10rem 10rem 8rem;
+  }
+
+  .testimonials h2 {
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+    margin-bottom: 5rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* GALLERY - 4 columns equal width */
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-image {
+    height: 100%;
+    min-height: 447px;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 4.5rem 2rem 5rem;
+  }
+
+  .social-links {
+    margin-bottom: 4.5rem;
+  }
+}
+
+/* ==================== LARGER DESKTOP (1024px+) ==================== */
+@media (min-width: 1024px) {
+  .feature-content {
+    padding: 0 8rem;
+  }
+}
+
+/* ==================== EXTRA LARGE DESKTOP (1200px+) ==================== */
+@media (min-width: 1200px) {
+  .feature-content {
+    padding: 0 10rem;
+  }
+}
+
+/* ==================== FULL HD (1440px+) ==================== */
+@media (min-width: 1440px) {
+  .feature-content {
+    padding: 0 10rem 0 11rem;
+  }
+}
