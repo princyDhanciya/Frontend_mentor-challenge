@@ -17,10 +17,10 @@ A vibrant, pixel-perfect landing page for a creative agency built with pure HTML
 ## 🖼️ Screenshots
 
 ### Desktop View
-![Desktop Preview](./design/desktop-sedign.jpg)
+![Desktop Preview](./design/desktop-design.jpg)
 
 ### Mobile View
-![Mobile Preview](./design/mobile-menu.jpg)
+![Mobile Preview](./design/mobile-design.jpg)
 
 ## 🚀 Live Demo
 
